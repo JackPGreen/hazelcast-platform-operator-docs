@@ -2427,7 +2427,9 @@ UserCodeNamespaceSpec defines the desired state of UserCodeNamespace
 [cols="4,8,4,2,4"options="header"]
 |===
 | Field | Description | Type | Required | Default
-m| bucketConfig | Bucket config from where the JAR files will be downloaded. m| &#42;<<BucketConfiguration,BucketConfiguration>> | false | -
+m| bucketConfigs | Bucket configs from where the JAR files will be downloaded. m| []<<BucketSource,BucketSource>> | false | -
+m| configMaps | Names of the list of ConfigMaps. Files in each ConfigMap will be downloaded. m| []string | false | -
+m| remoteURLs | List of URLs from where the files will be downloaded. m| []string | false | -
 m| hazelcastResourceName | HazelcastResourceName defines the name of the Hazelcast resource that this resource is created for. m| string | true | -
 |===
 
